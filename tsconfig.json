@@ -1,32 +1,64 @@
 {
+  //TypeScriptのコンパイラ設定を指定
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    //コンパイルされたJavaScriptコードのECMAScriptのバージョンを指定
+    "target": "ES6",
+    
+    //モジュールの形式を指定
+    "module": "CommonJS",
+
+    //厳密な型チェックを行うかどうか
     "strict": true,
-    "jsx": "preserve",
+
+    //jsxの変換方法を指定
+    "jsx": "preserve", //変換しない
+
+    //モジュールの解決方法を指定
     "moduleResolution": "node",
+
+    //型定義のチェックをスキップするかどうか
     "skipLibCheck": true,
+
+    // CommonJSモジュールをESモジュールに変換するための設定
     "esModuleInterop": true,
+
+    //default exportがない場合に、importをdefault exportとして扱うかどうかを指定
     "allowSyntheticDefaultImports": true,
+
+    //ファイル名の大文字と小文字を厳密にチェックするかどうかを指定
     "forceConsistentCasingInFileNames": true,
+
+    //ファイル名の大文字と小文字を厳密にチェックするかどうかを指定
     "useDefineForClassFields": true,
+
+    //ソースマップの生成を有効にするかどうか
     "sourceMap": true,
+
+    //モジュールのルートとなるディレクトリを指定
     "baseUrl": ".",
+
+    //使用する型ファイルを指定
     "types": [
       "webpack-env"
     ],
+
+    //モジュール名とモジュールのパスをマッピングするための設定
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
+
+    //コンパイル時に利用するJavaScriptのAPを指定
     "lib": [
-      "esnext",
+      "ES6",
       "dom",
       "dom.iterable",
       "scripthost"
     ]
   },
+
+  //コンパイルするファイルのパスを指定
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
@@ -34,6 +66,8 @@
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
+
+  //コンパイルしないファイルのパスを指定
   "exclude": [
     "node_modules"
   ]
