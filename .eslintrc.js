@@ -14,8 +14,9 @@ module.exports = {
     "plugin:vue/vue3-essential",  //Vue.js 3 に必要な設定を含む
     "eslint:recommended",         //ESLint の推奨設定
     "@vue/typescript/recommended",//TypeScript に必要な設定を含む 
-    "@vue/prettier",
-    "@vue/prettier/@typescript-eslint",
+    //エラーが発生するため一旦コメントアウト
+    //"@vue/prettier",
+    //"@vue/prettier/@typescript-eslint",
     "plugin:prettier/recommended",// Prettier による自動フォーマットを含む 
   ],
   //プロジェクトで使用する ECMAScript のバージョンを指定
