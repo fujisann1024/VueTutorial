@@ -1,5 +1,17 @@
 <template>
-  <router-view />
+  <div class = "site">
+
+    <AppHeader />
+
+    <main class = "main">
+
+      <AppHero />
+      <router-view />
+    </main>
+
+    <AppFooter />
+
+  </div>
   <div id = "nav">
     <router-link to="/">Top</router-link> |
     <router-link to="/about">About</router-link> |
