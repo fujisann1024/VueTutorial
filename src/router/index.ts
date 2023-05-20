@@ -69,6 +69,9 @@ const routes: Array<RouteRecordRaw> = [
 
 ];
 
+//TOPページを省いたmenuRotesオブジェクトを追加
+export const menuRoutes = routes.slice(1, routes.length);
+
 //routerオブジェクトの作成
 const router = createRouter({
   //Web履歴を作成
