@@ -1,4 +1,5 @@
 // mediaquery
+//1366px
 @mixin xl($scope) {
     @if $scope == min {
       @media (min-width: ($XL + 1 + 'px')) {
@@ -11,18 +12,20 @@
     }
   }
   
+  //1024px
   @mixin lg($scope) {
     @if $scope == min {
       @media (min-width: ($LG + 1 + 'px')) {
         @content;
       }
     } @else {
-      @media (max-width: ($LG + 'px'z)) {
+      @media (max-width: ($LG + 'px')) {
         @content;
       }
     }
   }
   
+  //768px
   @mixin md($scope) {
     @if $scope == min {
       @media (min-width: ($MD + 1 + 'px')) {
@@ -35,6 +38,7 @@
     }
   }
   
+  //576px
   @mixin sm($scope) {
     @if $scope == min {
       @media (min-width: ($SM + 1 + 'px')) {
@@ -47,6 +51,7 @@
     }
   }
   
+  //375px
   @mixin xs($scope) {
     @if $scope == min {
       @media (min-width: ($XS + 1 + 'px')) {
@@ -59,6 +64,7 @@
     }
   }
   
+  //デバイスが横向きになった際に適用
   @mixin landscape() {
     @media (orientation: landscape) {
       @content;
@@ -66,18 +72,28 @@
   }
   
   @mixin visually-hidden {
+    //要素を絶対位置に配置
     position: absolute !important;
+    //要素の内容がはみ出た場合は表示せず,要素の範囲内に収める
     overflow: hidden !important;
+    //要素の幅を1pxに設定
     width: 1px !important;
+    //要素の高さを1pxに設定
     height: 1px !important;
+    //要素の間隔を0
     margin: 0 !important;
     padding: 0 !important;
     border: 0 !important;
+    //要素内のテキストを折り返さず、1行で表示されるよう設定
     white-space: nowrap !important;
+    //要素を中央でクリップ
     clip-path: inset(50%) !important;
+    //要素の領域内には何も表示しない
     clip: rect(0, 0, 0, 0) !important;
   }
   
+  //フォーカスがあたった際に要素に2pxの実線の
+  //アウトラインが表示され、そのアウトラインは要素から6px離れて表示
   @mixin focus-base {
     outline: 2px solid $COLOR_MAIN;
     outline-offset: 6px;
