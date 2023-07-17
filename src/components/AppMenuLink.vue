@@ -29,3 +29,19 @@ export default defineComponent({
         </span>
     </router-link>
 </template>
+
+<style lang="scss" scoped>
+.AppMenu__link {
+  display: inline-block;
+  vertical-align: top;
+  font-family: $FONT_EN;
+  font-weight: $FONT_WEIGHT_EN_BOLD;
+  font-size: em(63, 16);
+  line-height: 1.4;
+  color: #fff;
+  text-decoration: none;
+  @include md(max) {
+    font-size: em(40, 16);
+  }
+}
+</style>
